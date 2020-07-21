@@ -3,8 +3,8 @@ kind: TriggerTemplate
 metadata:
   annotations:
     tekton.dev/git-status: "true"
-    tekton.dev/status-context: ci-dryrun-from-push-pipeline
-    tekton.dev/status-description: CI dry run on push event
+    tekton.dev/status-context: ci-dryrun-from-pr-pipeline
+    tekton.dev/status-description: Stage CI Dry Run
   creationTimestamp: null
   name: ci-dryrun-from-push-template
   namespace: aug-cicd
