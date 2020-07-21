@@ -2,4 +2,4 @@ resources:
 - argo-app.yaml
 - argocd.yaml
 - cicd-app.yaml
-- gitops166-dev-app-taxi-app.yaml
+- july-dev-app-taxi-app.yaml

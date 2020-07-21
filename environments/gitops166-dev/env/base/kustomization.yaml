@@ -1,3 +1,0 @@
-resources:
-- gitops166-dev-environment.yaml
-- gitops166-dev-rolebinding.yaml
