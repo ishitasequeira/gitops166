@@ -6,7 +6,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: july-cicd
+    namespace: aug-cicd
     server: https://kubernetes.default.svc
   ignoreDifferences:
   - group: argoproj.io
@@ -31,7 +31,7 @@ spec:
     kind: Route
   project: default
   source:
-    path: config/july-cicd/overlays
+    path: config/aug-cicd/overlays
     repoURL: https://github.com/ishitasequeira/gitops166.git
   syncPolicy:
     automated:

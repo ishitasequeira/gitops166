@@ -2,13 +2,13 @@ config:
   argocd:
     namespace: argocd
   pipelines:
-    name: july-cicd
+    name: aug-cicd
 environments:
 - apps:
   - name: app-taxi
     services:
     - taxi
-  name: july-dev
+  name: aug-dev
   pipelines:
     integration:
       bindings:
@@ -19,12 +19,12 @@ environments:
     pipelines:
       integration:
         bindings:
-        - july-dev-taxi-binding
+        - aug-dev-taxi-binding
         - github-push-binding
     source_url: https://github.com/ishitasequeira/taxi.git
     webhook:
       secret:
-        name: webhook-secret-july-dev-taxi
-        namespace: july-cicd
-- name: july-stage
+        name: webhook-secret-aug-dev-taxi
+        namespace: aug-cicd
+- name: aug-stage
 gitops_url: https://github.com/ishitasequeira/gitops166.git

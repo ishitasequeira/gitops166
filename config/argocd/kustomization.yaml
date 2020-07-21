@@ -1,5 +1,5 @@
 resources:
 - argo-app.yaml
 - argocd.yaml
+- aug-dev-app-taxi-app.yaml
 - cicd-app.yaml
-- july-dev-app-taxi-app.yaml
