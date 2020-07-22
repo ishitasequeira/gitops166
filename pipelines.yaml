@@ -1,0 +1,30 @@
+config:
+  argocd:
+    namespace: argocd
+  pipelines:
+    name: aug-cicd
+environments:
+- apps:
+  - name: app-taxi
+    services:
+    - taxi
+  name: aug-dev
+  pipelines:
+    integration:
+      bindings:
+      - github-push-binding
+      template: app-ci-template
+  services:
+  - name: taxi
+    pipelines:
+      integration:
+        bindings:
+        - aug-dev-taxi-binding
+        - github-push-binding
+    source_url: https://github.com/ishitasequeira/taxi.git
+    webhook:
+      secret:
+        name: webhook-secret-aug-dev-taxi
+        namespace: aug-cicd
+- name: aug-stage
+gitops_url: https://github.com/ishitasequeira/gitops166.git

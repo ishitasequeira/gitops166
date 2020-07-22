@@ -1,0 +1,3 @@
+resources:
+- aug-dev-environment.yaml
+- aug-dev-rolebinding.yaml
